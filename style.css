@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@600&display=swap');
+
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.video-background {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  background-position: center center;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.timer-container {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+  width: 45vw;
+  /* width: 95vw; */
+  position: absolute;
+  border-radius: 10px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  padding: 50px;
+}
+
+#timer-form label {
+  display: block;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+#timer-form input {
+  width: 35vw;
+  border-radius: 45px;
+  padding: 15px;
+  border: 1px solid #fff;
+  background-color: rgba(144, 144, 144, 0.6);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: bold;
+}
+input::placeholder {
+  color: rgb(17, 17, 20);
+}
+
+button {
+  display: block;
+  width: 35vw;
+  margin-top: 20px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 45px;
+  margin: auto;
+  padding: 15px;
+  margin-top: 40px;
+  background-color: #8d5634;
+  color: #fff;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+.hidden {
+  display: none;
+}
+
+ul {
+  margin: 0px;
+  margin-left: -45px;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+
+/* CSS animation */
+#complete-title {
+  animation: title 4s infinite;
+}
+
+@keyframes title {
+  0% {
+    color: #38e70c;
+  }
+
+  25% {
+    color: #eb3508;
+  }
+  50% {
+    transform: scale(1.5);
+    color: #8d5634;
+  }
+  75% {
+    color: #e00ce7;
+  }
+  100% {
+    color: #0aeff7;
+  }
+}
+
+/* responsive query Screen viewport */
+@media screen and (max-width: 1300px) {
+  .timer-container {
+    width: 65vw;
+  }
+
+  #timer-form input {
+    width: 55vw;
+  }
+
+  li {
+    font-size: 25px;
+  }
+
+  li span {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  li {
+    font-size: 10px;
+  }
+
+  li span {
+    font-size: 30px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
